@@ -13,10 +13,10 @@ import com.java.net.entity.Weather;
 @FeignClient(name = "WeatherMapAPIv2", url = "http://localhost:9090")
 public interface WeatherClient {
 	
-	@RequestMapping(value = "/weathers/{location}", method = RequestMethod.GET)
-	public Weather[] getWeather(@PathVariable("location") String loaction);
+//	@RequestMapping(value = "/weather/{location}", method = RequestMethod.GET)
+//	public Weather[] getWeather(@PathVariable("location") String loaction);
 	
 	@RequestMapping(value = "/weather/{location}", method = RequestMethod.GET, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public Weather[] getWeatherByLocation(@PathVariable("location") String loaction);
+	public String getWeatherByLocation(@PathVariable("location") String loaction);
 
 }
