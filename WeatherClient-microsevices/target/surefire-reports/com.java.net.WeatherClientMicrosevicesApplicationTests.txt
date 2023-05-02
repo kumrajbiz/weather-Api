@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.java.net.WeatherClientMicrosevicesApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.703 s <<< FAILURE! - in com.java.net.WeatherClientMicrosevicesApplicationTests
+contextLoads  Time elapsed: 0.012 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'weatherController': Unsatisfied dependency expressed through field 'weatherService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'weatherService': Unsatisfied dependency expressed through field 'weatherClient'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.java.net.client.WeatherClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'weatherService': Unsatisfied dependency expressed through field 'weatherClient'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.java.net.client.WeatherClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.java.net.client.WeatherClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+
