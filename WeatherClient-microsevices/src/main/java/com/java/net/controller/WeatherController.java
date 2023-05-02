@@ -39,14 +39,14 @@ public class WeatherController {
     public Weather[] getWeather(@PathParam("location") String location) {
 //        String url = "http://openweathermap/forecast?location=" + location;
 
-        return weatherService.getWeather(location);
+        return null;
     }
     
     
     @GetMapping("/weather/{location}")
-    public ResponseEntity<Weather[]> getWeatherByLocation(@PathVariable("location") String location) {
+    public ResponseEntity<String> getWeatherByLocation(@PathVariable("location") String location) {
     	System.out.println("controoler  "+location);
-    	Weather[] weather = weatherService.getWeatherByLocation(location);
+    	String weather = weatherService.getWeatherByLocation(location);
     	return ResponseEntity.ok(weather);
     	
     }
