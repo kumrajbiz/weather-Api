@@ -6,7 +6,7 @@ import com.java.net.entity.Weather;
 
 public interface WeatherService {
 
-	public Weather[] getWeather(String location);
+	//public Weather[] getWeather(String location);
 	
-	public Weather[] getWeatherByLocation(String location);
+	public String getWeatherByLocation(String location);
 }
